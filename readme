@@ -1,0 +1,12 @@
+https://flutter.dev/docs/cookbook
+
+1) Flutter SDK: /home/{user}/flutter
+2) Run "flutter doctor"
+3) Go to your created flutter project directory
+	flutter create project_name
+4) cd project_name
+5) Run "flutter emulators" to see any emulators
+6) Run "flutter emulators --launch Nexus 5X API 28<your emulator id>"
+7) Run "flutter run"
+
+
