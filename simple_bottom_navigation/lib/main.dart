@@ -69,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
     
+    //Body items start from center user differnt options for requirements
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),//shows the text on screen when bottom navigation bar is selected
       ),
