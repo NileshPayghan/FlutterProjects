@@ -92,14 +92,86 @@ class CustomDrawer extends StatelessWidget {
       width: mediaQueryData.size.width * 0.60,
       height: mediaQueryData.size.height,
       child: Column(
+        //list of widgets that we want to shown in sidebar
         children: <Widget>[
           Container(
-            width: ,
-            height: ,
-            color: ,
-            child: ,
+            width: double.infinity,
+            height: 200,
+            color: Colors.grey.withAlpha(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+
+              //header of the drawer
+              children: <Widget>[
+                Image.asset(
+                  "assets/profile.jpg",
+                  width: 100,
+                  height: 100,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text("npsoft technologies")
+              ],
+            )),
             
-          )
+           //body of the drawer
+          //Profile page
+          ListTile(
+            onTap: (){
+              //where to go define here
+              debugPrint("Tapped Profile");
+            },
+            leading: Icon(Icons.person),
+            title: Text("Your Profile",),
+          ),
+
+          //Just divider between two
+          Divider(
+              height: 1,
+              color: Colors.grey,
+          ),
+
+        //settings navigation in drawer
+        ListTile(
+          onTap: (){
+            debugPrint("Tapped Settings");
+          },
+          leading: Icon(Icons.settings),
+          title: Text("settings"),
+        ),
+
+        Divider(
+          height: 1,
+          color: Colors.grey,
+        ),
+
+        //notifications 
+        ListTile(
+          onTap: (){
+            debugPrint("Tapped Notifications");
+          },
+          leading: Icon(Icons.notifications),
+          title: Text("Notifications"),
+        ),
+        Divider(
+          height: 1,
+          color: Colors.grey,
+        ),
+
+        //logout
+        ListTile(
+          onTap: (){
+            debugPrint("Tapped Log out");
+          },
+          leading: Icon(Icons.exit_to_app),
+          title: Text("Log out"),
+        ),
+        Divider(
+          height: 1,
+          color: Colors.grey,
+        ),
+
         ],
       ),
 
