@@ -28,6 +28,10 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
+  #floating search bar used for gmail like app bar which has search, menu and icon in it.
+  floating_search_bar: ^0.3.0
+  #Animated Text kit to animate the text in app
+  animated_text_kit: ^2.2.0
 
 dev_dependencies:
   flutter_test:
