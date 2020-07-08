@@ -25,7 +25,11 @@ class _SafeAreaWidgetState extends State<SafeAreaWidget> {
           right: _isEnabled,
           left: _isEnabled,
           
-          //we need more than one widgets.
+          //don't use it if you want to display exact SafeArea working process.
+          //minimum: EdgeInsets.all(20),//which change value of safeArea in terms of padding from every side.
+          //maintainBottomViewPadding: true,
+          
+          //this required attribute for SafeArea.
           child: Column(  //A widget 'Column' that displays it's children in vertical order.
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
@@ -45,6 +49,7 @@ class _SafeAreaWidgetState extends State<SafeAreaWidget> {
                 ),
               ),
               
+              //After long press it will which widget is used
               Tooltip(
                 message: "Raised Button",
                 child: RaisedButton(
