@@ -21,7 +21,7 @@ samples, guidance on mobile development, and a full API reference.
 Directory structure for Widget of the weeks or other packages
 
 lib
-   |__ package_name or catgories
+   |__ package_name or libraries
    |			  |
    |			  |__API or Widgets with .dart file and explanation about it.
    |
