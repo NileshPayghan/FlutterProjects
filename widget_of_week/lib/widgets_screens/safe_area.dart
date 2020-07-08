@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 // https://api.flutter.dev/flutter/widgets/SafeArea-class.html
 // https://api.flutter.dev/flutter/widgets/SafeArea/SafeArea.html
 
+
+//Used Stateful widget due to change in the widgets during runtime.
 class SafeAreaWidget extends StatefulWidget {
   @override
   _SafeAreaWidgetState createState() => _SafeAreaWidgetState();
