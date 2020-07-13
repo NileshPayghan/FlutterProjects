@@ -13,27 +13,35 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: SafeArea(
         child: CustomScrollView(
+
           slivers: <Widget>[
             SliverAppBar(
               expandedHeight: 250.0,
               pinned: true,
               floating: true,
               backgroundColor: Theme.of(context).primaryColor,
+              
               flexibleSpace: FlexibleSpaceBar(
-                background: Image.network("https://i.pinimg.com/originals/79/27/f9/7927f976b17065d627f94c0e125ac79c.jpg",
-                fit: BoxFit.cover,),
-                title: MyHeader(),//Header which display image and text 
-                centerTitle: true,
+                  //collapseMode: CollapseMode.parallax,
+                  background: Image.network("https://i.pinimg.com/originals/79/27/f9/7927f976b17065d627f94c0e125ac79c.jpg",
+                    fit: BoxFit.cover,
+                    ),
+                  title: MyHeader(),//Header which display image and text 
+                  centerTitle: true,
               ),
+              
               actions: <Widget>[
-                IconButton(icon: Icon(Icons.search), onPressed: (){},),
+                IconButton(
+                  icon: Icon(Icons.search),
+                  onPressed: (){},
+                ),
               ],
             ),
+
             SliverFixedExtentList(
-              itemExtent: 50.0,
+              itemExtent: 45.0,
               delegate: SliverChildListDelegate(
                 [
                   listItem("SafeArea Widget", context),
@@ -42,6 +50,18 @@ class _MyAppState extends State<MyApp> {
                   //   //thickness: 0.2,
                   //   color: Theme.of(context).primaryColor,
                   // ),
+                  //Padding(padding: EdgeInsets.all(5.0),),
+                  listItem("List item 2", context),
+                  listItem("List item 3", context),
+                  listItem("List item 4", context),
+                  listItem("List item 5", context),
+                  listItem("List item 6", context),
+                  listItem("List item 1", context),
+                  listItem("List item 1", context),
+                  listItem("List item 1", context),
+                  listItem("List item 1", context),
+                  listItem("List item 1", context),
+                  listItem("List item 1", context),
                   listItem("List item 1", context),
                   listItem("List item 1", context),
                   listItem("List item 1", context),
@@ -62,6 +82,8 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
+
+  //Item for each context to Navigate from here
   Widget listItem(String title, BuildContext context) => Container(
     decoration: BoxDecoration(
       border: Border(
@@ -84,13 +106,26 @@ class _MyAppState extends State<MyApp> {
     ),
   );
 
+  //SliverAppBar Header
   Widget MyHeader() => Container(
-    color: Theme.of(context).primaryColor,
+    //color: Theme.of(context).primaryColor, //Color behind the Text and circular Avatar
     child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Text("This is header"),
+        Row(
+          children: <Widget>[
+            Padding(padding: EdgeInsets.fromLTRB(50, 10, 20.0, 20),),
+            Text("This is header",),
+            //padding between Text and circularAvatar
+            Padding(padding: EdgeInsets.only(right: 10.0),),
+            CircleAvatar(
+              //child: Text("LX"),//Text on image
+              backgroundColor: Theme.of(context).primaryColor,//If image not loaded shows background color
+              backgroundImage: NetworkImage("https://avatars.sched.co/0/2f/7876803/avatar.jpg?5fb"),//Network image if not loaded default color is shown
+            ),
+          ],
+        ),
       ],
 
     ),
