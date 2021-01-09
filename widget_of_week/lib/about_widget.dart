@@ -9,8 +9,14 @@ class AboutWidget extends StatefulWidget {
 class _AboutWidgetState extends State<AboutWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("This is about page."),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("About"),
+      ),
+      extendBody: true,
+      body: Container(
+        child: Text("This is about Page"),
+      ),
     );
   }
 }

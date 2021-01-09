@@ -1,14 +1,35 @@
 https://flutter.dev/docs/cookbook
 
+****Note: Use codepen on browser ****
+
+~/android-studio/bin$ sudo ./studio.sh 
+flutter --help
+
 1) Flutter SDK: /home/{user}/flutter
 2) Run "flutter doctor"
 3) Go to your created flutter project directory
 	flutter create project_name
 4) cd project_name
 5) Run "flutter emulators" to see any emulators
-6) Run "flutter emulators --launch Nexus 5X API 28<your emulator id>"
-7) Run "flutter run"
+6) sudo chmod 777 /dev/kvm
+7) Run "flutter emulators --launch Nexus 5X API 28<your emulator id>"
+8) Run "flutter run"
 
+--------------------------------------
+9) Run flutter web
+flutter config --enable-web
+flutter run -d chrome
+
+10) flutter pub get
+11) flutter upgrade/flutter pub outdated
+12) flutter clean
+13) flutter build
+14) flutter build apk(build apk)
+15) flutter build appbundle
+
+------------------
+Change channels in flutter
+16) flutter channel [dev/beta/master/stable]
 
 
 

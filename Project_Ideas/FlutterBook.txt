@@ -1,0 +1,15 @@
+Other Names for this app:
+- flutter handy book/FHB
+- flutter book/FB
+- flutter study book/FSB
+- flutter practice/FP
+- flutter widget practice/FWP
+- Widget Book/WB
+- Widget Guide Book/WGB
+
+- App contains Widgets list and to learn about the widgets
+- App contains one simple example for each widget showed with their codes.
+- App contains static content except few external links.
+- About Page shows social link about the author.(Nilesh Payghan)
+- App contains one single SliverList and within that we show examples for widgets with codes
+- Some of the codes will be commented to get idea about particular widget.

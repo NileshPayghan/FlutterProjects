@@ -44,7 +44,13 @@ class _MyAppState extends State<MyApp> {
               itemExtent: 45.0,
               delegate: SliverChildListDelegate(
                 [
-                  listItem("SafeArea Widget", context),
+                  RaisedButton(
+                    child: listItem("SafeArea Widget", context),
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/safe_area');
+                    }
+                    ),
+                  
                   // Divider(
                   //   height: 0,
                   //   //thickness: 0.2,
@@ -79,6 +85,18 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        label: Text("About"),
+        tooltip: "Extended Floating Action Button",
+        // autofocus: true,
+        backgroundColor: Theme.of(context).backgroundColor,
+        foregroundColor: Theme.of(context).accentColor,
+        heroTag: Hero,
+        onPressed: (){
+            Navigator.pushNamed(context, '/about_widget');
+        },
+       ),
+       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 
